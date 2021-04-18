@@ -1,0 +1,41 @@
+language: python
+
+python:
+  - 2.7
+  - 3.6
+  - 3.7
+  - 3.8
+  - 3.9
+
+install:
+  - pip install -e .[test]
+
+script:
+  - pycodestyle
+  - pytest
+
+jobs:
+  include:
+    - stage: deploy
+      if: tag ~= /^v(\d+\.){2}\d+(-\S+)?$/
+      python: 3.6
+      install:
+        - pip install .[deploy]
+      script:
+        - export RELEASE_NOTES=$(scripts/release_notes.py $TRAVIS_TAG)
+      deploy:
+        - provider: pypi
+          edge: true
+          username: $PYPI_USERNAME
+          password: $PYPI_PASSWORD
+          distributions: sdist bdist_wheel
+          remove_build_dir: false
+          on:
+            tags: true
+        - provider: releases
+          edge: true
+          token: $GITHUB_TOKEN
+          file: dist/*
+          release_notes: $RELEASE_NOTES
+          on:
+            tags: true
