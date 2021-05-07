@@ -1,5 +1,4 @@
-# Copyright (c) 2021 Steven Stallion
-# All rights reserved.
+# Copyright (C) 2021 Steven Stallion <sstallion@gmail.com>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -54,10 +53,10 @@ logger = logging.getLogger(__name__)
 def cli(ctx, *args, **kwargs):
     """Vimwiki Command-Line Interface
 
-    vimwiki is a command-line interface to Vimwiki, a plugin for the Vim text
-    editor.  It provides a front-end for interactive editor commands and can
-    be used to automate repetitive tasks such as rebuilding tag metadata and
-    generating links, all from the command line.
+    vimwiki-cli is a command-line interface to Vimwiki, a plugin for the Vim
+    text editor.  It provides a front-end for interactive editor commands and
+    can be used to automate repetitive tasks such as rebuilding tag metadata
+    and generating links, all from the command line.
 
     Global options may also be configured using environment variables:
 

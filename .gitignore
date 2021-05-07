@@ -2,7 +2,7 @@
 *.py[co]
 __pycache__/
 /.coverage
-/.pytest_cache
-/build
-/dist
-/venv
+/.pytest_cache/
+/build/
+/dist/
+/venv/

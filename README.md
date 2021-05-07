@@ -1,20 +1,20 @@
 # Vimwiki Command-Line Interface
 
-[![](https://img.shields.io/travis/com/sstallion/vimwiki-cli)][Travis]
-[![](https://img.shields.io/pypi/v/vimwiki-cli)][PyPI]
-[![](https://img.shields.io/pypi/pyversions/vimwiki-cli)][PyPI]
+[![](https://img.shields.io/travis/com/sstallion/vimwiki-cli)][1]
+[![](https://img.shields.io/pypi/v/vimwiki-cli)][2]
+[![](https://img.shields.io/pypi/pyversions/vimwiki-cli)][2]
 [![](https://img.shields.io/github/license/sstallion/vimwiki-cli)][LICENSE]
 
-`vimwiki-cli` is a command-line interface to [Vimwiki], a plugin for the [Vim]
-text editor. It provides a front-end for interactive editor commands and can be
-used to automate repetitive tasks such as rebuilding tag metadata and generating
-links, all from the command line.
+`vimwiki-cli` is a command-line interface to [Vimwiki][3], a plugin for the
+[Vim][4] text editor. It provides a front-end for interactive editor commands
+and can be used to automate repetitive tasks such as rebuilding tag metadata and
+generating links, all from the command line.
 
-[![](https://asciinema.org/a/411893.svg)](https://asciinema.org/a/411893?autoplay=1)
+[![](https://asciinema.org/a/413921.svg)](https://asciinema.org/a/413921?autoplay=1)
 
 ## Installation
 
-`vimwiki-cli` is available on [PyPI] and can be installed locally using the
+`vimwiki-cli` is available on [PyPI][2] and can be installed locally using the
 Python Package Installer:
 
     $ pip install --user vimwiki-cli
@@ -73,7 +73,7 @@ startup file to provide completion:
 
 ### Git Integration
 
-For wikis managed with git, a pre-commit hook script is available that executes
+For wikis managed with Git, a pre-commit hook script is available that executes
 non-interactive commands to rebuild tag metadata and generate links before
 commit.
 
@@ -108,10 +108,11 @@ Pull requests are welcome! See [CONTRIBUTING.md] for more details.
 Source code in this repository is licensed under a Simplified BSD License. See
 [LICENSE] for more details.
 
-[CONTRIBUTING.md]: https://github.com/sstallion/vimwiki-cli/blob/master/CONTRIBUTING.md
-[LICENSE]: https://github.com/sstallion/vimwiki-cli/blob/master/LICENSE
-[pre-commit.sh]: https://github.com/sstallion/vimwiki-cli/blob/master/scripts/pre-commit.sh
-[PyPI]: https://pypi.org/project/vimwiki-cli/
-[Travis]: https://travis-ci.com/sstallion/vimwiki-cli
-[Vim]: https://www.vim.org/
-[Vimwiki]: https://vimwiki.github.io/
+[1]: https://travis-ci.com/sstallion/vimwiki-cli
+[2]: https://pypi.org/project/vimwiki-cli/
+[3]: https://vimwiki.github.io/
+[4]: https://www.vim.org/
+
+[CONTRIBUTING.md]: CONTRIBUTING.md
+[LICENSE]: LICENSE
+[pre-commit.sh]: scripts/pre-commit.sh

@@ -1,5 +1,4 @@
-# Copyright (c) 2021 Steven Stallion
-# All rights reserved.
+# Copyright (C) 2021 Steven Stallion <sstallion@gmail.com>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -114,7 +113,7 @@ class GlobalCommand(Command):
         elif wiki.select:
             args.insert(0, 'VimwikiUISelect')
 
-            # Force interactive if VimwikiUISelect executed:
+            # Force interactive if VimwikiUISelect will be executed:
             options['interactive'] = True
 
         Command.__init__(self, wiki, *args, **options)
