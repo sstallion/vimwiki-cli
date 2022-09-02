@@ -34,7 +34,7 @@ setup(name='vimwiki-cli',
       license='BSD-2-Clause',
       keywords='cli vim vimwiki wiki',
       install_requires=[
-          'click~=7.1',
+          'click>=7.1',
       ],
       entry_points={
           'console_scripts': [
