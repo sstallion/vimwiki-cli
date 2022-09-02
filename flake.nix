@@ -26,6 +26,7 @@
         propagatedBuildInputs = [ python-deps ];
         doCheck = false;
       };
+      packages.x86_64-linux.defaultPackage.x86_64-linux = self.packages.x86_64-linux.vimwiki-cli;
       devShell.x86_64-linux = pkgs.mkShell {
         buildInputs = [
           python-with-my-packages
