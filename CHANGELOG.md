@@ -7,10 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add support for Python 3.10
+
 ### Changed
 
 - Update documentation
 - Update Click dependency to `>=7.1` ([Anish Lakhwara](https://github.com/Chickensoupwithrice))
+
+### Removed
+
+- Remove support for Python 3.6
 
 ## [v1.0.0] - 2021-05-04
 
