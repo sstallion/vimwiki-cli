@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update documentation
+- Update Click dependency to `>=7.1` ([Anish Lakhwara](https://github.com/Chickensoupwithrice))
+
 ## [v1.0.0] - 2021-05-04
 
 Initial release
