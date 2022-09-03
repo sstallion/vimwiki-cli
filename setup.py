@@ -42,18 +42,15 @@ setup(name='vimwiki-cli',
           ]
       },
       extras_require={
-          'build': [
-              'build>=0.3.0',
-              'virtualenv>=20.0.35'
-          ],
           'test': [
               'coverage~=5.5',
               'mock~=3.0',
               'pycodestyle~=2.7',
-              'pytest~=4.6',
-              'pytest-cov~=2.11'
+              'pytest>=4.6',
+              'pytest-cov>=2.11'
           ],
-          'deploy': [
+          'release': [
+              'build>=0.3.0',
               'bump2version>=1.0.0',
               'keepachangelog>=0.5.0'
           ]

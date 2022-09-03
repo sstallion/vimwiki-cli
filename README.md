@@ -1,6 +1,6 @@
 # Vimwiki Command-Line Interface
 
-[![](https://img.shields.io/travis/com/sstallion/vimwiki-cli)][1]
+[![](https://github.com/sstallion/vimwiki-cli/actions/workflows/ci.yml/badge.svg?branch=master)][1]
 [![](https://img.shields.io/pypi/v/vimwiki-cli)][2]
 [![](https://img.shields.io/pypi/pyversions/vimwiki-cli)][2]
 [![](https://img.shields.io/github/license/sstallion/vimwiki-cli)][LICENSE]
@@ -17,7 +17,7 @@ generating links, all from the command line.
 `vimwiki-cli` is available on [PyPI][2] and can be installed locally using the
 Python Package Installer:
 
-    $ pip install --user vimwiki-cli
+    $ python -m pip install --user vimwiki-cli
 
 Once installed, issue `vimwiki --help` to see usage.
 
@@ -108,7 +108,7 @@ Pull requests are welcome! See [CONTRIBUTING.md] for more details.
 Source code in this repository is licensed under a Simplified BSD License. See
 [LICENSE] for more details.
 
-[1]: https://travis-ci.com/sstallion/vimwiki-cli
+[1]: https://github.com/sstallion/vimwiki-cli/actions/workflows/ci.yml
 [2]: https://pypi.org/project/vimwiki-cli/
 [3]: https://vimwiki.github.io/
 [4]: https://www.vim.org/
