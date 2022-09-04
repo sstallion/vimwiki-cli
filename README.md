@@ -3,10 +3,10 @@
 [![](https://github.com/sstallion/vimwiki-cli/actions/workflows/ci.yml/badge.svg?branch=master)][1]
 [![](https://img.shields.io/pypi/v/vimwiki-cli)][2]
 [![](https://img.shields.io/pypi/pyversions/vimwiki-cli)][2]
-[![](https://img.shields.io/github/license/sstallion/vimwiki-cli)][LICENSE]
+[![](https://img.shields.io/github/license/sstallion/vimwiki-cli)][3]
 
-`vimwiki-cli` is a command-line interface to [Vimwiki][3], a plugin for the
-[Vim][4] text editor. It provides a front-end for interactive editor commands
+`vimwiki-cli` is a command-line interface to [Vimwiki][4], a plugin for the
+[Vim][5] text editor. It provides a front-end for interactive editor commands
 and can be used to automate repetitive tasks such as rebuilding tag metadata and
 generating links, all from the command line.
 
@@ -96,23 +96,22 @@ links in the `Tags` page before commit, issue:
     $ git config vimwiki.generatetaglinks true
     $ git config vimwiki.rebuildtags true
 
-To enable the hook, copy or link [pre-commit.sh] to `.git/hooks/pre-commit` in
-the wiki directory.
+To enable the hook, copy or link [pre-commit.sh][6] to `.git/hooks/pre-commit`
+in the wiki directory.
 
 ## Contributing
 
-Pull requests are welcome! See [CONTRIBUTING.md] for more details.
+Pull requests are welcome! See [CONTRIBUTING.md][7] for more details.
 
 ## License
 
 Source code in this repository is licensed under a Simplified BSD License. See
-[LICENSE] for more details.
+[LICENSE][3] for more details.
 
 [1]: https://github.com/sstallion/vimwiki-cli/actions/workflows/ci.yml
 [2]: https://pypi.org/project/vimwiki-cli/
-[3]: https://vimwiki.github.io/
-[4]: https://www.vim.org/
-
-[CONTRIBUTING.md]: CONTRIBUTING.md
-[LICENSE]: LICENSE
-[pre-commit.sh]: scripts/pre-commit.sh
+[3]: https://github.com/sstallion/vimwiki-cli/blob/master/LICENSE
+[4]: https://vimwiki.github.io/
+[5]: https://www.vim.org/
+[6]: https://github.com/sstallion/vimwiki-cli/blob/master/scripts/pre-commit.sh
+[7]: https://github.com/sstallion/vimwiki-cli/blob/master/CONTRIBUTING.md
