@@ -26,7 +26,7 @@ environment, and activate:
 Dependencies are managed via `setuptools`; to set up the environment for
 development, issue:
 
-    $ python -m pip install -e ".[test]"
+    $ python -m pip install -e '.[test]'
 
 Once you are finished making changes, be sure to check the output of
 `pycodestyle` and `pytest` by issuing:
@@ -53,33 +53,35 @@ To make a new release, follow these steps:
 
        $ python -m pip install -e '.[release]'
 
-2. Verify `pycodestyle` and `pytest` are passing locally (see above).
-
-3. Increment the version number by issuing:
+2. Increment the version number by issuing:
 
        $ bump2version <major|minor|patch>
 
-4. Create a new section in [CHANGELOG.md] for the new version, and move items
+3. Create a new section in [CHANGELOG.md] for the new version, and move items
    from `Unreleased` to this section. Links should also be updated to point to
    the correct tags for comparison.
 
-5. Verify release notes by issuing:
+4. Verify release notes by issuing:
 
        $ python scripts/release_notes.py v<version>
 
-6. Commit outstanding changes by issuing:
+5. Commit outstanding changes by issuing:
 
        $ git commit -a -m 'Release v<version>'
+
+6. Push changes to the remote repository and verify the results of the [CI][4]
+   workflow:
+
+       $ git push origin master
 
 7. Create a release tag by issuing:
 
        $ git tag -a -m 'Release v<version>' v<version>
 
-8. Push changes to the remote `master` branch by issuing:
+8. Push the release tag to the remote repository and verify the results of the
+   [Release][5] workflow:
 
-       $ git push origin master --tags
-
-9. Verify the results of the [Release][4] workflow.
+       $ git push origin --tags
 
 ## License
 
@@ -89,6 +91,7 @@ licensed under its Simplified BSD License.
 [1]: https://github.com/sstallion/vimwiki-cli/issues
 [2]: https://docs.github.com/en/github/getting-started-with-github/fork-a-repo
 [3]: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
-[4]: https://github.com/sstallion/vimwiki-cli/actions/workflows/release.yml
+[4]: https://github.com/sstallion/vimwiki-cli/actions/workflows/ci.yml
+[5]: https://github.com/sstallion/vimwiki-cli/actions/workflows/release.yml
 
 [CHANGELOG.md]: CHANGELOG.md

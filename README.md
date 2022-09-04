@@ -79,15 +79,15 @@ commit.
 
 The pre-commit hook relies on the following configuration options:
 
-| Configuration Option          | Description                                    |
-|-------------------------------|------------------------------------------------|
-| `vimwiki.options`             | Extra options to pass to the `vimwiki` command |
-| `vimwiki.linkspage`           | Page which contains generated links            |
-| `vimwiki.taglinkspage`        | Page which contains generated tag links        |
-| `vimwiki.generatelinks`       | Generate links before commit (bool)            |
-| `vimwiki.generatediarylinks`  | Generate diary links before commit (bool)      |
-| `vimwiki.generatetaglinks`    | Generate tag links before commit (bool)        |
-| `vimwiki.rebuildtags`         | Rebuild tag metadata before commit (bool)      |
+| Configuration Option         | Description                                    |
+|------------------------------|------------------------------------------------|
+| `vimwiki.options`            | Extra options to pass to the `vimwiki` command |
+| `vimwiki.linkspage`          | Page which contains generated links            |
+| `vimwiki.taglinkspage`       | Page which contains generated tag links        |
+| `vimwiki.generatelinks`      | Generate links before commit (bool)            |
+| `vimwiki.generatediarylinks` | Generate diary links before commit (bool)      |
+| `vimwiki.generatetaglinks`   | Generate tag links before commit (bool)        |
+| `vimwiki.rebuildtags`        | Rebuild tag metadata before commit (bool)      |
 
 For example, to configure the hook to rebuild tag metadata and generate tag
 links in the `Tags` page before commit, issue:

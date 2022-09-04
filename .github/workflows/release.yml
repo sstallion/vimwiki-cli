@@ -9,15 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
       - name: Install dependencies
         run: python -m pip install -e .[release]
       - name: Build release
         run: python -m build --sdist --wheel
       - name: Generate release notes
-        run: >
-          python scripts/release_notes.py ${{ github.ref_name }}
+        run: |
+          python scripts/release_notes.py ${{ github.ref_name }} \
             >${{ github.workspace }}-RELEASE.md
       - uses: softprops/action-gh-release@v1
         with:
