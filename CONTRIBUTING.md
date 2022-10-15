@@ -38,8 +38,8 @@ At a minimum, there should be no test regressions and additional tests should be
 added for new functionality. If user-facing changes are introduced, be sure add
 an entry to the `Unreleased` section in [CHANGELOG.md][3].
 
-With that out of the way, you may now commit your changes and create a
-[pull request][4] against the `master` branch for review!
+Finally, commit your changes and create a [pull request][4] against the `master`
+branch for review.
 
 ## Making New Releases
 
