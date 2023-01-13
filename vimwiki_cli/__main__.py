@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 
 
 @click.group(context_settings=CONTEXT_SETTINGS, invoke_without_command=True,
-             epilog='Please report issues to https://github.com/sstallion/vimwiki-cli/issues.')
+             epilog='Report issues to https://github.com/sstallion/vimwiki-cli/issues.')
 @click.option('--editor',
               help='Editor to launch, defaults to $EDITOR or vim.')
 @click.option('--count', type=int,
