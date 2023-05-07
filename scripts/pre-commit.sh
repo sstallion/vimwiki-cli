@@ -68,6 +68,13 @@ then
 	say_done
 fi
 
+if test "$(git config --bool vimwiki.allhtml || echo false)" = true
+then
+	say 'Converting all wiki pages to HTML...'
+	vimwiki $options all-html || exit
+	say_done
+fi
+
 if test "$(git config --bool vimwiki.generatetaglinks || echo false)" = true
 then
 	page=$(git config vimwiki.taglinkspage || echo index)

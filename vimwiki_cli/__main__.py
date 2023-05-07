@@ -82,6 +82,15 @@ def cli(ctx, *args, **kwargs):
 
 
 @cli.command()
+@click.option('--all', is_flag=True,
+              help='Rebuild all files, not just those that are newer.')
+@pass_wiki
+def all_html(wiki, all):
+    """Convert all wiki pages to HTML."""
+    wiki.all_html(all)
+
+
+@cli.command()
 @pass_wiki
 def check_links(wiki):
     """Search files and check reachability of links."""

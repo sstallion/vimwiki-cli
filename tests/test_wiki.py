@@ -105,6 +105,18 @@ def test_diary_generate_links(mock_cmd, wiki):
 
 
 @mock.patch('vimwiki_cli.wiki.LocalCommand')
+@pytest.mark.parametrize('args,expected', [
+    (False, 'silent! VimwikiAll2HTML'),
+    (True, 'silent! VimwikiAll2HTML!')
+])
+def test_all_html(mock_cmd, wiki, args, expected):
+    wiki.all_html(args)
+
+    mock_cmd.assert_called_with(wiki, expected,
+                                interactive=False, quit=True)
+
+
+@mock.patch('vimwiki_cli.wiki.LocalCommand')
 def test_check_links(mock_cmd, wiki):
     wiki.check_links()
 

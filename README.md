@@ -45,6 +45,7 @@ The following table details the mapping between these commands:
 | CLI Command                             | Ex Commands                                                         |
 |-----------------------------------------|---------------------------------------------------------------------|
 | `vimwiki`                               | `:VimwikiIndex`                                                     |
+| `vimwiki all-html`                      | `:VimwikiIndex \| VimwikiAll2HTML`                                  |
 | `vimwiki check-links`                   | `:VimwikiIndex \| VimwikiCheckLinks`                                |
 | `vimwiki diary`                         | `:VimwikiDiaryIndex`                                                |
 | `vimwiki diary generate-links`          | `:VimwikiDiaryIndex \| VimwikiDiaryGenerateLinks`                   |
@@ -88,6 +89,7 @@ The pre-commit hook relies on the following configuration options:
 | `vimwiki.generatediarylinks` | Generate diary links before commit (bool)      |
 | `vimwiki.generatetaglinks`   | Generate tag links before commit (bool)        |
 | `vimwiki.rebuildtags`        | Rebuild tag metadata before commit (bool)      |
+| `vimwiki.allhtml`            | Convert wiki to HTML before commit (bool)      |
 
 For example, to configure the hook to rebuild tag metadata and generate tag
 links in the `Tags` page before commit, issue:
