@@ -97,6 +97,18 @@ def test_default(mock_index, runner):
     mock_index.assert_called_with()
 
 
+@mock.patch('vimwiki_cli.wiki.Wiki.all_html')
+@pytest.mark.parametrize('args,expected', [
+    ('', False),
+    ('--all', True)
+])
+def test_all_html(mock_all_html, runner, args, expected):
+    result = runner.invoke(cli, 'all-html ' + args)
+    assert result.exit_code == 0
+
+    mock_all_html.assert_called_with(expected)
+
+
 @mock.patch('vimwiki_cli.wiki.Wiki.check_links')
 def test_check_links(mock_check_links, runner):
     result = runner.invoke(cli, 'check-links')

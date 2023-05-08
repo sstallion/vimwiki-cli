@@ -112,6 +112,11 @@ class Wiki(object):
         DiaryCommand(self, 'VimwikiDiaryGenerateLinks',
                      interactive=False, write_quit=True).run()
 
+    def all_html(self, all=False):
+        """Convert all wiki pages to HTML."""
+        LocalCommand(self, 'silent! VimwikiAll2HTML' + ('!' if all else ''),
+                     interactive=False, quit=True).run()
+
     def check_links(self):
         """Search files and check reachability of links."""
         LocalCommand(self, 'VimwikiCheckLinks').run()
