@@ -7,14 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.0] - 2023-05-08
+
 ### Added
 
-- Add `VimwikiAll2HTML[!]`
+- Add support for `VimwikiAll2HTML[!]` ([jfishe](https://github.com/jfishe))
 
 ### Changed
 
 - Update documentation
-- Add `vimwiki.allhtml` (bool) to `scripts/pre-commit.sh`.
+- Add `vimwiki.allhtml` to `scripts/pre-commit.sh`
 
 ## [v1.0.2] - 2022-09-04
 
@@ -41,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial release
 
-[Unreleased]: https://github.com/sstallion/vimwiki-cli/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/sstallion/vimwiki-cli/compare/v1.1.0...HEAD
+[v1.1.0]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.1.0
 [v1.0.2]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.0.2
 [v1.0.1]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.0.1
 [v1.0.0]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.0.0
