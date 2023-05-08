@@ -12,6 +12,7 @@
 # vimwiki.generatediarylinks -- Generate diary links before commit (bool)
 # vimwiki.generatetaglinks -- Generate tag links before commit (bool)
 # vimwiki.rebuildtags -- Rebuild tag metadata before commit (bool)
+# vimwiki.allhtml -- Convert wiki to HTML before commit (bool)
 #
 # To enable this hook, copy or link this file to ".git/hooks/pre-commit".
 
@@ -68,19 +69,19 @@ then
 	say_done
 fi
 
-if test "$(git config --bool vimwiki.allhtml || echo false)" = true
-then
-	say 'Converting all wiki pages to HTML...'
-	vimwiki $options all-html || exit
-	say_done
-fi
-
 if test "$(git config --bool vimwiki.generatetaglinks || echo false)" = true
 then
 	page=$(git config vimwiki.taglinkspage || echo index)
 
 	say 'Generating tag links...'
 	vimwiki $options tags generate-links "$page" || exit
+	say_done
+fi
+
+if test "$(git config --bool vimwiki.allhtml || echo false)" = true
+then
+	say 'Converting all wiki pages to HTML...'
+	vimwiki $options all-html || exit
 	say_done
 fi
 
