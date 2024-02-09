@@ -1,0 +1,6 @@
+- id: vimwiki-cli
+  name: Vimwiki rebuild tag metadata and generate links
+  description: A pre-commit hook script to execute non-interactive vimwiki commands to rebuild tag metadata and generate links before commit.
+  entry: scripts/pre-commit.sh
+  language: python
+  types: [markdown]
