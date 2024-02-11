@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `pre-commit` hook `id: vimwiki-cli` to simplify installing `pre-commit.sh`
+  script (
+  [Issue #7](https://github.com/sstallion/vimwiki-cli/issues/7#issue-876664886))
+
+### Changed
+
 ## [v1.1.0] - 2023-05-08
 
 ### Added
