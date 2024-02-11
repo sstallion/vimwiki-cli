@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Github Actions workflow `CI` removed python-2.7 and added python-3.11 because
+  `ubuntu-latest` dropped python-2.7 support. Updated `checkout` and
+  `setup-python` actions to latest versions.
+
 ## [v1.1.0] - 2023-05-08
 
 ### Added
