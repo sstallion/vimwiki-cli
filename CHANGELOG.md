@@ -7,17 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.0] - 2024-02-12
+
+### Removed
+
+- Support for Python 2.7 has been removed ([jfishe](https://github.com/jfishe))
+
 ### Added
 
+- Support for Python 3.11 has been added ([jfishe](https://github.com/jfishe))
 - `pre-commit` hook `id: vimwiki-cli` to simplify installing `pre-commit.sh`
-  script (
-  [Issue #7](https://github.com/sstallion/vimwiki-cli/issues/7#issue-876664886))
-
-### Changed
-
-- Github Actions workflow `CI` removed python-2.7 and added python-3.11 because
-  `ubuntu-latest` dropped python-2.7 support. Updated `checkout` and
-  `setup-python` actions to latest versions.
+  script ([#7](https://github.com/sstallion/vimwiki-cli/issues/7#issue-876664886))
+  ([jfishe](https://github.com/jfishe))
 
 ## [v1.1.0] - 2023-05-08
 
@@ -55,7 +56,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial release
 
-[Unreleased]: https://github.com/sstallion/vimwiki-cli/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/sstallion/vimwiki-cli/compare/v1.2.0...HEAD
+[v1.2.0]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.2.0
 [v1.1.0]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.1.0
 [v1.0.2]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.0.2
 [v1.0.1]: https://github.com/sstallion/vimwiki-cli/releases/tag/v1.0.1

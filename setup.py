@@ -6,7 +6,7 @@ with open(os.path.join(dirname, 'README.md')) as f:
     long_description = f.read()
 
 setup(name='vimwiki-cli',
-      version='1.1.0',
+      version='1.2.0',
       description='Vimwiki Command-Line Interface',
       long_description=long_description,
       long_description_content_type='text/markdown',
@@ -21,13 +21,12 @@ setup(name='vimwiki-cli',
           'License :: OSI Approved :: BSD License',
           'Operating System :: OS Independent',
           'Programming Language :: Python',
-          'Programming Language :: Python :: 2',
-          'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3',
           'Programming Language :: Python :: 3.7',
           'Programming Language :: Python :: 3.8',
           'Programming Language :: Python :: 3.9',
           'Programming Language :: Python :: 3.10',
+          'Programming Language :: Python :: 3.11',
           'Topic :: Text Editors',
           'Topic :: Text Editors :: Documentation'
       ],
