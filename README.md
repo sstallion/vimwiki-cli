@@ -28,7 +28,7 @@ variables are available to modify default behavior without the need to pass
 global options on the command line:
 
 | Environment Variable   | Global Option    | Description                                       |
-|------------------------|------------------|---------------------------------------------------|
+| ---------------------- | ---------------- | ------------------------------------------------- |
 | `VIMWIKI_EDITOR`       | `--editor`       | Editor to launch, defaults to `$EDITOR` or `vim`. |
 | `VIMWIKI_COUNT`        | `--count`        | Index of wiki to open.                            |
 | `VIMWIKI_SELECT`       | `--select`       | Select wiki from interactive list.                |
@@ -43,7 +43,7 @@ Each CLI command corresponds to one or more Ex commands executed in the editor.
 The following table details the mapping between these commands:
 
 | CLI Command                             | Ex Commands                                                         |
-|-----------------------------------------|---------------------------------------------------------------------|
+| --------------------------------------- | ------------------------------------------------------------------- |
 | `vimwiki`                               | `:VimwikiIndex`                                                     |
 | `vimwiki all-html`                      | `:VimwikiIndex \| VimwikiAll2HTML`                                  |
 | `vimwiki check-links`                   | `:VimwikiIndex \| VimwikiCheckLinks`                                |
@@ -81,7 +81,7 @@ commit.
 The pre-commit hook relies on the following configuration options:
 
 | Configuration Option         | Description                                    |
-|------------------------------|------------------------------------------------|
+| ---------------------------- | ---------------------------------------------- |
 | `vimwiki.options`            | Extra options to pass to the `vimwiki` command |
 | `vimwiki.linkspage`          | Page which contains generated links            |
 | `vimwiki.taglinkspage`       | Page which contains generated tag links        |
@@ -99,7 +99,19 @@ links in the `Tags` page before commit, issue:
     $ git config vimwiki.rebuildtags true
 
 To enable the hook, copy or link [pre-commit.sh][6] to `.git/hooks/pre-commit`
-in the wiki directory.
+in the wiki directory. Alternatively, if [pre-commit][8] is installed, add a
+`pre-commit` configuration file, `.pre-commit-config.yaml` and run
+`pre-commit autoupdate` to enable the latest version of the hook.
+
+```yaml
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/sstallion/vimwiki-cli
+    rev: v1.1.0
+    hooks:
+      - id: vimwiki-cli
+```
 
 ## Contributing
 
@@ -117,3 +129,4 @@ Source code in this repository is licensed under a Simplified BSD License. See
 [5]: https://www.vim.org/
 [6]: https://github.com/sstallion/vimwiki-cli/blob/master/scripts/pre-commit.sh
 [7]: https://github.com/sstallion/vimwiki-cli/blob/master/CONTRIBUTING.md
+[8]: https://pre-commit.com/index
