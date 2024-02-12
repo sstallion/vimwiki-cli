@@ -11,11 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
-- Support for Python 2.7 has been removed ([jfishe](https://github.com/jfishe))
+- Remove support for Python 2.7 ([jfishe](https://github.com/jfishe))
 
 ### Added
 
-- Support for Python 3.11 has been added ([jfishe](https://github.com/jfishe))
+- Add support for Python 3.11 ([jfishe](https://github.com/jfishe))
 - `pre-commit` hook `id: vimwiki-cli` to simplify installing `pre-commit.sh`
   script ([#7](https://github.com/sstallion/vimwiki-cli/issues/7#issue-876664886))
   ([jfishe](https://github.com/jfishe))
